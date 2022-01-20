@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8f5f7;
+}
+input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+label {
+  width: 500px;
+  height: 150px;
+  background-color: #477a85;
+
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0 0 20px #477a8550;
+}
+label::after {
+  content: "";
+  width: 120px;
+  height: 120px;
+  background-color: #e8f5f7;
+  position: absolute;
+  border-radius: 70px;
+  top: 15px;
+  left: 15px;
+  transition: 0.5s;
+}
+
+input:checked + label:after {
+  left: calc(100% - 10px);
+  transform: translateX(-100%);
+}
+
+input:checked + label {
+  background-color: #243d42;
+}
+
+label:active:after {
+  width: 160px;
+}
+
+
+Resources
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="switch" id="switch">
+<label for="switch"></label>
+</body>
