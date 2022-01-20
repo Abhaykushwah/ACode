@@ -1,0 +1,13 @@
+curl localhost:3226   { GET request }
+
+curl -I -X GET localhost:3226 {HEADER file}
+
+curl localhost:8080 -v    {verbose GET request}
+
+curl http://admin:password@localhost:8080/ -vvv      {curl basic Auth login}
+
+curl -u admin:password http://localhost:8080/ -vvv {Alternate curl basic auth login}
+
+curl - admin:password -L http://localhost:3222/  {curl basic auth login, follow redirection}
+
+curl -u admin:password http://localhost:8080/search.php?port_code=us   { GET request with perameter }
